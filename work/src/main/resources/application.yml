@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: song
+    password: song1998
+    url: jdbc:mysql://8.131.54.33:3306/blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true
+  mail:
+    host: smtp.qq.com
+    username: 1308659229@qq.com
+    default-encoding: UTF-8
+    password: slsgzcvfqifigeea
+    properties:
+      mail:
+        smtp:
+            #         ssl安全 qq邮箱特有
+          starttls:
+            enable: true
+            required: true
+    port: 587
+mybatis-plus:
+  configuration:
+    # 是否将sql打印到控制面板(该配置会将sql语句和查询的结果都打印到控制台)
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+server:
+  port: 9999
+  tomcat:
+    threads:
+      max: 200
+  max-http-header-size: 8192
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+hcode:
+  jwt:
+    # 加密秘钥
+    secret: himit-zh-is-a-handsome-boy
+    # token有效时长，7天，单位秒
+    expire: 604800
+    header: token
