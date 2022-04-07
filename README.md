@@ -1,5 +1,5 @@
 # MyBlog
-Springboot+vue 简单的博客系统
+Springboot+vue 简单的博客系统， 数据库文件为blog.sql 。
 # 开发工具
 开发工具  | 版本
 -------- | -----
